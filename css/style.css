@@ -1,9 +1,9 @@
 body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    font-size: 2em;
 }
 
-h1 {
+h2 {
+    font-size: 3em;
     margin: 100px auto 100px auto;
 }

@@ -6,8 +6,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <style>
-    </style>
 </head>
 
 <body>
@@ -15,44 +13,31 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <h1 id="total"><img src="img/ajax-loader.gif" alt="loading image"></h1>
+                <h2 id="total"><img src="img/ajax-loader.gif" alt="loading image"></h1>
                 <div class="panel panel-default">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th>Bestemming</th>
                                 <th>Datum</th>
                                 <th>Auto</th>
                                 <th>Begin Km</th>
                                 <th>Eind Km</th>
                                 <th>Totaal Km</th>
+                                <th>Lange afstand</th>
                             </tr>
                         </thead>
-                        <tr>
-                            <td>12-12</td>
-                            <td>Saab</td>
-                            <td>100000</td>
-                            <td>100100</td>
-                            <td>100</td>
-                        </tr>
-                        <tr>
-                            <td id="date"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        <tbody id="total-table"></tbody>
                     </table>
                 </div>
             </div>
             <div class="col-md-2"></div>
         </div>
     </div>
-    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-    <script src="js/google-query.js" type="text/javascript"></script>
-    <script src="https://www.google.com/uds/?file=visualization&v=1.0" type="text/javascript"></script>
-    <script src="https://www.google.com/uds/api/visualization/1.0/abbdd6ab2d343a51d49841bf93d022fb/format+en,default+en.I.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/tabletop.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/tabletop-query.js" type="text/javascript"></script>
 </body>
 
 </html>

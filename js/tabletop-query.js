@@ -46,15 +46,17 @@ function showInfo(data) {
 
         totalKm += Number(subtotal.innerHTML);
 
-
-        var discount = document.createElement("td");
-        if (data[i].Korting == "Lange afstand") {
-            discount.innerHTML = "Ja";
-            row.appendChild(discount);
-        } else {
-            discount.innerHTML = "Nee";
-            row.appendChild(discount);
-        }
+        // var discount = document.createElement("td");
+        // if (data[i].Korting == "Lange afstand") {
+        //     discount.innerHTML = "Ja";
+        //     row.appendChild(discount);
+        // } else {
+        //     discount.innerHTML = "Nee";
+        //     row.appendChild(discount);
+        // }
     }
-    document.getElementById("total").innerHTML = "Totaal\: " + totalKm + "km";
+
+    var totalEuro = totalKm * 0.2;
+
+    document.getElementById("total").innerHTML = "Totaal\: " + totalKm + " km / " + totalEuro + " \€";
 }

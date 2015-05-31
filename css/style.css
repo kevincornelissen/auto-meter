@@ -7,3 +7,15 @@ h2 {
     font-size: 3em;
     margin: 100px auto 100px auto;
 }
+
+#sharan-bar-trip, #sharan-bar-km{
+	background-color: #398ED7;
+}
+
+#bar-trip-title, #bar-km-title{
+	text-align: left;
+}
+
+.hidden{
+	display: none;
+}

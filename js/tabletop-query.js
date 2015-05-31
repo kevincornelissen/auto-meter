@@ -42,15 +42,15 @@ function showInfo(data) {
         }
 
         var start = document.createElement("td");
-        start.innerHTML = data[i].Begin_KM;
+        start.innerHTML = data[i].Begin;
         row.appendChild(start);
 
         var end = document.createElement("td");
-        end.innerHTML = data[i].Eind_KM;
+        end.innerHTML = data[i].Eind;
         row.appendChild(end);
 
         var subtotal = document.createElement("td");
-        subtotal.innerHTML = data[i].Eind_KM - data[i].Begin_KM;
+        subtotal.innerHTML = data[i].Eind - data[i].Begin;
         row.appendChild(subtotal);
 
         totalKm += Number(subtotal.innerHTML);
@@ -77,7 +77,7 @@ function showInfo(data) {
     var percentageSaabKm = countSaabKm / (countSaabKm + countSharanKm) * 100;
     var percentageSharanKm = countSharanKm / (countSaabKm + countSharanKm) * 100;
 
-    document.getElementById("total").innerHTML = "Totaal\: " + totalKm + " km / " + totalEuro + " \€";
+    document.getElementById("total").innerHTML = "Totaal\: " + totalKm + " km / &euro; " + totalEuro;
 
     document.getElementById("saab-bar-trip").setAttribute("aria-valuenow", percentageSaab);
     document.getElementById("saab-bar-trip").style.width = percentageSaab + "%";

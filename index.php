@@ -60,11 +60,29 @@ if ($totalEndKmSharan->num_rows > 0) {
 $totalKmSaab = $totalEndKmSaabValue - $totalBeginKmSaabValue;
 $totalKmSharan = $totalEndKmSharanValue - $totalBeginKmSharanValue;
 
-$saabPercentagePerRide = $totalCountSaabValue / ($totalCountSaabValue + $totalCountSharanValue) * 100;
-$sharanPercentagePerRide = $totalCountSharanValue / ($totalCountSharanValue + $totalCountSaabValue) * 100;
+$saabPercentagePerRide = round($totalCountSaabValue / ($totalCountSaabValue + $totalCountSharanValue) * 100);
+$sharanPercentagePerRide = round($totalCountSharanValue / ($totalCountSharanValue + $totalCountSaabValue) * 100);
 
 $saabPercentagePerKm = round($totalKmSaab / ($totalKmSaab + $totalKmSharan) * 100);
 $sharanPercentagePerKm = round($totalKmSharan / ($totalKmSaab + $totalKmSharan) * 100);
+
+if(isset($_POST['submit'])){
+    $datum = $_POST['datum'];
+    $bestemming = $_POST['bestemming'];
+    $auto = $_POST['auto'];
+    $beginKm = $_POST['begin-km'];
+    $eindKm = $_POST['eind-km'];
+
+    $sql = "INSERT INTO test (date, destination, car, begin_km, end_km)
+    VALUES ('$datum', '$bestemming', '$auto', $beginKm, $eindKm)";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
 ?>
 <!DOCTYPE>
 <html>
@@ -142,7 +160,30 @@ $sharanPercentagePerKm = round($totalKmSharan / ($totalKmSaab + $totalKmSharan) 
                                 <h4 class="modal-title" id="myModalLabel">Nieuwe rit</h4>
                             </div>
                             <div class="modal-body">
-                                <p>content goes here...</p>
+                            <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
+                            <div class="form-group">
+                                <label for="bestemmingInput">Bestemming</label>
+                                <input type="text" name="bestemming"class="form-control" id="bestemmingInput" placeholder="Vul bestemming in">
+                            </div>
+                            <div class="form-group">
+                                <label for="datumInput">Datum</label>
+                                <input type="text" name="datum" class="form-control" id="datumInput" placeholder="Vul datum in">
+                            </div>
+                            <div class="form-group">
+                                <label for="autoInput">Auto</label>
+                                <input type="text" name="auto" class="form-control" id="autoInput" placeholder="Vul auto in">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="beginInput">Begin Km</label>
+                                <input type="text" name="begin-km" class="form-control" id="beginInput" placeholder="Vul begin km in">
+                            </div>
+                            <div class="form-group">
+                                <label for="eindInput">Begin Km</label>
+                                <input type="text" name="eind-km" class="form-control" id="eindInput" placeholder="Vul eind km in">
+                            </div>
+                            <button type="submit" name="submit" class="btn btn-default">Submit</button>
+                            </form>
                             </div>
                         </div>
                     </div>

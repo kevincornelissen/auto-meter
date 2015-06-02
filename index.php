@@ -23,9 +23,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <h2 id="total">
-                <?= "Totaal: " . $totalKm . "km / €" . $totalEuro?>
-                </h2>
+                <h2 id="total">Totaal: <?= $totalKm ?> km/ € <?=$totalEuro?></h2>
                 <div class="panel panel-default">
                     <table class="table table-bordered">
                         <thead>
@@ -36,7 +34,6 @@
                                 <th>Begin Km</th>
                                 <th>Eind Km</th>
                                 <th>Totaal Km</th>
-                                <!-- <th>Lange afstand</th> -->
                             </tr>
                         </thead>
                         <tbody id="total-table">

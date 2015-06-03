@@ -1,7 +1,7 @@
 <?php
 $config = [
-	'host' => 'localhost',
-	'user' => 'root',
-	'password' => 'root',
-	'db' => 'practice'
+	'host' => 'kevincornelissen.be',
+	'user' => 'kevinc17_kevin',
+	'password' => 'powerlight',
+	'db' => 'kevinc17_auto'
 ];

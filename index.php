@@ -91,6 +91,10 @@
                                 <label for="eindInput">Eind Km</label>
                                 <input type="text" name="eind-km" class="form-control" id="eindInput" placeholder="Vul eind km in">
                             </div>
+                            <div class="form-group">
+                                <label for="code">Code</label>
+                                <input type="password" name="code" class="form-control" id="code" placeholder="code">
+                            </div>
                             <button type="submit" name="submit" class="btn btn-default">Submit</button>
                             </form>
                             </div>

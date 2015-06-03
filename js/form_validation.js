@@ -4,6 +4,7 @@ function validateForm() {
     	auto = $("#autoInput").val(),
     	beginKm = $("#beginInput").val(),
     	eindKm = $("#eindInput").val(),
+    	code = $("#code").val(),
     	status = true;
 
     $("#bestemmingInput").parent().removeClass("has-error");
@@ -23,22 +24,28 @@ function validateForm() {
 
     $("#autoInput").parent().removeClass("has-error");
 	auto = $.trim(auto);
-    if(auto != "Saab" || auto !="Sharan"){
+    if(auto != "Saab" && auto != "Sharan"){
     	$("#autoInput").parent().addClass("has-error");
     	if (status!= false){ status = false};
     }
 
     $("#beginInput").parent().removeClass("has-error");
     beginKm = $.trim(beginKm);
-    if(!beginKm.match(/^[0-9]{6}$/)){
+    if(!beginKm.match(/^[0-9]{1,6}$/)){
     	$("#beginInput").parent().addClass("has-error");
     	if (status!= false){ status = false};
     }
 
     eindKm = $.trim(eindKm);
     $("#eindInput").parent().removeClass("has-error");
-    if(!eindKm.match(/^[0-9]{6}$/)){
+    if(!eindKm.match(/^[0-9]{1,6}$/)){
     	$("#eindInput").parent().addClass("has-error");
+    	if (status!= false){ status = false};
+    }
+
+    $("#code").parent().removeClass("has-error");
+    if(code != "wachtwoord"){
+    	$("#code").parent().addClass("has-error");
     	if (status!= false){ status = false};
     }
     return status;

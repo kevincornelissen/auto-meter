@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     $beginKm = $_POST['begin-km'];
     $eindKm = $_POST['eind-km'];
 
-    $sql = "INSERT INTO test (date, destination, car, begin_km, end_km)
+    $sql = "INSERT INTO trips (date, destination, car, begin_km, end_km)
     VALUES ('$datum', '$bestemming', '$auto', $beginKm, $eindKm)";
 
     $conn = connect($config);

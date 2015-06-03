@@ -70,14 +70,14 @@
                                 <h4 class="modal-title" id="myModalLabel">Nieuwe rit</h4>
                             </div>
                             <div class="modal-body">
-                            <form action="form.php" method="post">
+                            <form name="addTrip" action="form.php" method="post" onsubmit="return validateForm()">
                             <div class="form-group">
                                 <label for="bestemmingInput">Bestemming</label>
                                 <input type="text" name="bestemming"class="form-control" id="bestemmingInput" placeholder="Vul bestemming in">
                             </div>
                             <div class="form-group">
                                 <label for="datumInput">Datum</label>
-                                <input type="text" name="datum" class="form-control" id="datumInput" placeholder="Vul datum in">
+                                <input type="text" name="datum" class="form-control" id="datumInput" placeholder="jjjj/mm/dd">
                             </div>
                             <div class="form-group">
                                 <label for="autoInput">Auto</label>
@@ -103,6 +103,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/form_validation.js" type="text/javascript"></script>
 </body>
 
 </html>

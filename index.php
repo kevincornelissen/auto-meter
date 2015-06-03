@@ -38,17 +38,15 @@
                         </thead>
                         <tbody id="total-table">
                         <?php 
-                        if ($list->num_rows > 0) {
-                            while($row = $list->fetch_assoc()) {
-                                echo "<tr>";
-                                    echo "<td>" . $row["destination"] . "</td>";
-                                    echo "<td>" . $row["date"] . "</td>";
-                                    echo "<td>" . $row["car"] . "</td>";
-                                    echo "<td>" . $row["begin_km"] . "</td>";
-                                    echo "<td>" . $row["end_km"] . "</td>";
-                                    echo "<td>" . ($row["end_km"] - $row["begin_km"]) . "</td>";
-                                echo "</tr>";
-                            }
+                        while($row = $list->fetch_assoc()) {
+                            echo "<tr>";
+                                echo "<td>" . $row["destination"] . "</td>";
+                                echo "<td>" . $row["date"] . "</td>";
+                                echo "<td>" . $row["car"] . "</td>";
+                                echo "<td>" . $row["begin_km"] . "</td>";
+                                echo "<td>" . $row["end_km"] . "</td>";
+                                echo "<td>" . ($row["end_km"] - $row["begin_km"]) . "</td>";
+                            echo "</tr>";
                         }
                         ?>
                         </tbody>

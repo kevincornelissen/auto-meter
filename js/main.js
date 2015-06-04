@@ -1,16 +1,22 @@
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth() + 1; //January is 0!
-var yyyy = today.getFullYear();
+$(document).ready(function() {
+	setDateFieldWithCurrentDate();
+});
 
-if (dd < 10) {
-    dd = '0' + dd
+function setDateFieldWithCurrentDate() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm
+    }
+
+    today = yyyy + '/' + mm + '/' + dd;
+
+    $("#datumInput").val(today);
 }
-
-if (mm < 10) {
-    mm = '0' + mm
-}
-
-today = yyyy + '/' + mm + '/' + dd;
-
-$("#datumInput").val(today);

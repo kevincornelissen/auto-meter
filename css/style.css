@@ -1,9 +1,9 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    text-align: center;
 }
 
 h2 {
+    text-align: center;
     font-size: 3em;
     margin: 100px auto 100px auto;
 }
@@ -12,10 +12,6 @@ h2 {
 	background-color: #398ED7;
 }
 
-#bar-trip-title, #bar-km-title{
-	text-align: left;
-}
-
-.hidden{
-	display: none;
+#form-title{
+	text-align: center;
 }

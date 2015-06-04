@@ -67,7 +67,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Nieuwe rit</h4>
+                                <h4 class="modal-title" id="form-title">Nieuwe rit</h4>
                             </div>
                             <div class="modal-body">
                             <form name="addTrip" action="form.php" method="post" onsubmit="return validateForm()">
@@ -80,8 +80,12 @@
                                 <input type="text" name="datum" class="form-control" id="datumInput" placeholder="jjjj/mm/dd">
                             </div>
                             <div class="form-group">
-                                <label for="autoInput">Auto</label>
-                                <input type="text" name="auto" class="form-control" id="autoInput" placeholder="Vul auto in">
+                                <label for="autoInputSaab" class="radio-inline">
+                                    <input type="radio" name="auto" id="autoInputSaab" value="Saab"> Saab
+                                </label>
+                                <label for="autoInputSharan" class="radio-inline">
+                                    <input type="radio" name="auto" id="autoInputSharan" value="Sharan"> Sharan
+                                </label>
                             </div>
                             <div class="form-group">
                                 <label for="beginInput">Begin Km</label>
@@ -95,7 +99,9 @@
                                 <label for="code">Code</label>
                                 <input type="password" name="code" class="form-control" id="code" placeholder="code">
                             </div>
-                            <button type="submit" name="submit" class="btn btn-default">Submit</button>
+                            <div class="form-group">
+                                <button id="submit-button" type="submit" name="submit" class="btn btn-primary btn-block">Verstuur</button>
+                            </div>
                             </form>
                             </div>
                         </div>

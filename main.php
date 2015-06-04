@@ -31,3 +31,13 @@ $sharanPercentagePerRide = round($totalCountSharan / ($totalCountSharan + $total
 
 $saabPercentagePerKm = round($totalKmSaab / $totalKm * 100);
 $sharanPercentagePerKm = round($totalKmSharan / $totalKm * 100);
+
+if ($saabPercentagePerKm < 1) {
+	$saabPercentagePerKm = 1;
+	$sharanPercentagePerKm = 99;
+}
+
+if ($sharanPercentagePerKm < 1) {
+	$sharanPercentagePerKm = 1;
+	$saabPercentagePerKm = 99;
+}

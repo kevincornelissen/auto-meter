@@ -28,8 +28,8 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Bestemming</th>
                                 <th>Datum</th>
+                                <th>Bestemming</th>
                                 <th>Auto</th>
                                 <th>Begin Km</th>
                                 <th>Eind Km</th>
@@ -40,8 +40,8 @@
                         <?php 
                         while($row = $list->fetch_assoc()) {
                             echo "<tr>";
-                                echo "<td>" . $row["destination"] . "</td>";
                                 echo "<td>" . $row["date"] . "</td>";
+                                echo "<td>" . $row["destination"] . "</td>";
                                 echo "<td>" . $row["car"] . "</td>";
                                 echo "<td>" . $row["begin_km"] . "</td>";
                                 echo "<td>" . $row["end_km"] . "</td>";
@@ -70,39 +70,40 @@
                                 <h4 class="modal-title" id="form-title">Nieuwe rit</h4>
                             </div>
                             <div class="modal-body">
-                            <form name="addTrip" action="form.php" method="post" onsubmit="return validateForm()">
-                            <div class="form-group">
-                                <label for="bestemmingInput">Bestemming</label>
-                                <input type="text" name="bestemming"class="form-control" id="bestemmingInput" placeholder="Vul bestemming in">
-                            </div>
-                            <div class="form-group">
-                                <label for="datumInput">Datum</label>
-                                <input type="text" name="datum" class="form-control" id="datumInput" placeholder="jjjj/mm/dd">
-                            </div>
-                            <div class="form-group">
-                                <label for="autoInputSaab" class="radio-inline">
-                                    <input type="radio" name="auto" id="autoInputSaab" value="Saab"> Saab
-                                </label>
-                                <label for="autoInputSharan" class="radio-inline">
-                                    <input type="radio" name="auto" id="autoInputSharan" value="Sharan"> Sharan
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label for="beginInput">Begin Km</label>
-                                <input type="text" name="begin-km" class="form-control" id="beginInput" placeholder="Vul begin km in">
-                            </div>
-                            <div class="form-group">
-                                <label for="eindInput">Eind Km</label>
-                                <input type="text" name="eind-km" class="form-control" id="eindInput" placeholder="Vul eind km in">
-                            </div>
-                            <div class="form-group">
-                                <label for="code">Code</label>
-                                <input type="password" name="code" class="form-control" id="code" placeholder="code">
-                            </div>
-                            <div class="form-group">
-                                <button id="submit-button" type="submit" name="submit" class="btn btn-primary btn-block">Verstuur</button>
-                            </div>
-                            </form>
+                                <form name="addTrip" action="form.php" method="post" onsubmit="return validateForm()">
+                                    <label>Auto</label>
+                                    <div class="form-group">
+                                        <label for="autoInputSaab" class="radio-inline">
+                                            <input type="radio" name="auto" id="autoInputSaab" value="Saab"> Saab
+                                        </label>
+                                        <label for="autoInputSharan" class="radio-inline">
+                                            <input type="radio" name="auto" id="autoInputSharan" value="Sharan"> Sharan
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bestemmingInput">Bestemming</label>
+                                        <input type="text" name="bestemming"class="form-control" id="bestemmingInput" placeholder="Vul bestemming in">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="datumInput">Datum</label>
+                                        <input type="text" name="datum" class="form-control" id="datumInput" placeholder="jjjj/mm/dd">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="beginInput">Begin Km</label>
+                                        <input type="text" name="begin-km" class="form-control" id="beginInput" placeholder="Vul begin km in">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="eindInput">Eind Km</label>
+                                        <input type="text" name="eind-km" class="form-control" id="eindInput" placeholder="Vul eind km in">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="code">Code</label>
+                                        <input type="password" name="code" class="form-control" id="code" placeholder="code">
+                                    </div>
+                                    <div class="form-group">
+                                        <button id="submit-button" type="submit" name="submit" class="btn btn-primary btn-block">Verstuur</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -114,6 +115,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/form_validation.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>

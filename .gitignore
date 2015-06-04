@@ -1,3 +1,4 @@
 config.php
 *.DS_Store
 npm-debug.log
+README.md
